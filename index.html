@@ -1,250 +1,401 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- redeploy trigger: 2026-07-03 00:23 -->
-  <title>Kristy｜Bio Links</title>
-  <style>
-    :root {
-      --bg: #f7f4ee;
-      --surface: #ffffff;
-      --ink: #22313f;
-      --muted: #687385;
-      --accent: #6e916b;
-      --line: color-mix(in srgb, var(--ink) 16%, transparent);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", sans-serif;
-    }
-    main {
-      width: min(100%, 480px);
-      margin: 0 auto;
-      padding: 34px 18px 42px;
-    }
-    .profile { text-align: center; padding: 10px 8px 18px; }
-    .avatar {
-      width: 92px;
-      height: 92px;
-      border-radius: 999px;
-      object-fit: cover;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      box-shadow: 0 10px 28px rgba(0,0,0,.08);
-    }
-    .initials { color: var(--accent); font-size: 34px; font-weight: 700; }
-    h1 { margin: 16px 0 4px; font-size: 28px; letter-spacing: 0; }
-    .handle { margin: 0; color: var(--muted); }
-    .bio { margin: 12px auto 0; max-width: 34ch; line-height: 1.65; color: var(--ink); }
-    .links { display: grid; gap: 12px; margin: 14px 0 24px; }
-    .link-button {
-      min-height: 54px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border-radius: 14px;
-      text-decoration: none;
-      font-weight: 700;
-      letter-spacing: 0;
-      box-shadow: 0 8px 20px rgba(0,0,0,.08);
-    }
-    .link-button.solid { background: var(--accent); color: white; }
-    .link-button.outline { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
-    .section { margin-top: 22px; }
-    .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 10px; }
-    .section h2 { margin: 0; font-size: 18px; }
-    .section span { color: color-mix(in srgb, var(--muted) 72%, transparent); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
-    .schedule-image {
-      width: 100%;
-      display: block;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: var(--surface);
-    }
-    .cards { display: grid; gap: 8px; }
-    .card {
-      background: var(--surface);
-      border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
-      border-radius: 12px;
-      padding: 12px 13px;
-      box-shadow: 0 4px 12px rgba(0,0,0,.035);
-      overflow-wrap: anywhere;
-    }
-    .card h3 { margin: 0 0 8px; font-size: 16px; }
-    .card p { margin: 0; color: var(--muted); line-height: 1.5; word-break: keep-all; }
-    .card-lines { display: grid; gap: 3px; }
-    .card-location { margin-top: 6px; }
-    .card-action {
-      display: inline-flex;
-      margin-top: 10px;
-      color: var(--accent);
-      font-weight: 700;
-      text-decoration: none;
-    }
-    .venue-list {
-      display: grid;
-      gap: 8px;
-    }
-    .venue-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      background: var(--surface);
-      border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
-      border-radius: 12px;
-      padding: 12px 13px;
-    }
-    .venue-name { font-weight: 700; }
-    .venue-note { margin-top: 3px; color: var(--muted); font-size: 13px; }
-    .venue-actions {
-      display: inline-flex;
-      gap: 8px;
-      flex: 0 0 auto;
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .venue-actions a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .donate {
-      display: flex;
-      justify-content: center;
-      margin-top: 24px;
-      color: var(--accent);
-      font-weight: 700;
-      text-decoration: none;
-    }
-    .powered { margin: 22px 0 0; text-align: center; color: var(--muted); font-size: 12px; }
-  </style>
-</head>
-<body>
-  <main>
-    <header class="profile">
-      <div class="avatar initials">K</div>
-      <h1>Kristy</h1>
-      <p class="handle">@bodyknowsme</p>
-      <p class="bio">呼吸、瑜伽、覺察，與身心重新連結。</p>
-    </header>
-    
-        <nav class="links">
-          <a class="link-button solid" href="#venues">教室位置</a>
-<a class="link-button solid" href="#events">本月特別活動</a>
-<a class="link-button solid" href="https://yoga.flowwithkristy.com/" target="_blank" rel="noreferrer">洞洞瑜伽社官方網站</a>
-        </nav>
-        
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- redeploy trigger: 2026-07-03 00:23 -->
+    <title>Kristy｜Bio Links</title>
+    <style>
+      :root {
+        --bg: #f7f4ee;
+        --surface: #ffffff;
+        --ink: #22313f;
+        --muted: #687385;
+        --accent: #6e916b;
+        --line: color-mix(in srgb, var(--ink) 16%, transparent);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "PingFang TC",
+          "Noto Sans TC", sans-serif;
+      }
+      main {
+        width: min(100%, 480px);
+        margin: 0 auto;
+        padding: 34px 18px 42px;
+      }
+      .profile {
+        text-align: center;
+        padding: 10px 8px 18px;
+      }
+      .avatar {
+        width: 92px;
+        height: 92px;
+        border-radius: 999px;
+        object-fit: cover;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+      }
+      .initials {
+        color: var(--accent);
+        font-size: 34px;
+        font-weight: 700;
+      }
+      h1 {
+        margin: 16px 0 4px;
+        font-size: 28px;
+        letter-spacing: 0;
+      }
+      .handle {
+        margin: 0;
+        color: var(--muted);
+      }
+      .bio {
+        margin: 12px auto 0;
+        max-width: 34ch;
+        line-height: 1.65;
+        color: var(--ink);
+      }
+      .links {
+        display: grid;
+        gap: 12px;
+        margin: 14px 0 24px;
+      }
+      .link-button {
+        min-height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 14px;
+        text-decoration: none;
+        font-weight: 700;
+        letter-spacing: 0;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+      .link-button.solid {
+        background: var(--accent);
+        color: white;
+      }
+      .link-button.outline {
+        background: var(--surface);
+        color: var(--ink);
+        border: 1px solid var(--line);
+      }
+      .section {
+        margin-top: 22px;
+      }
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 10px;
+      }
+      .section h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+      .section span {
+        color: color-mix(in srgb, var(--muted) 72%, transparent);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .schedule-image {
+        width: 100%;
+        display: block;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+      }
+      .cards {
+        display: grid;
+        gap: 8px;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+        border-radius: 12px;
+        padding: 12px 13px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.035);
+        overflow-wrap: anywhere;
+      }
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 16px;
+      }
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+        word-break: keep-all;
+      }
+      .card-lines {
+        display: grid;
+        gap: 3px;
+      }
+      .card-location {
+        margin-top: 6px;
+      }
+      .card-action {
+        display: inline-flex;
+        margin-top: 10px;
+        color: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .venue-list {
+        display: grid;
+        gap: 8px;
+      }
+      .venue-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        background: var(--surface);
+        border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+        border-radius: 12px;
+        padding: 12px 13px;
+      }
+      .venue-name {
+        font-weight: 700;
+      }
+      .venue-note {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .venue-actions {
+        display: inline-flex;
+        gap: 8px;
+        flex: 0 0 auto;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .venue-actions a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .donate {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+        color: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .powered {
+        margin: 22px 0 0;
+        text-align: center;
+        color: var(--muted);
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="profile">
+        <div class="avatar initials">K</div>
+        <h1>Kristy</h1>
+        <p class="handle">@bodyknowsme</p>
+        <p class="bio">呼吸、瑜伽、覺察，與身心重新連結。</p>
+      </header>
 
-    <section class="section" id="terms">
-      <div class="section-head">
-        <h2>期班課程</h2>
-        <span>Programs</span>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <h3>脈輪覺醒｜8 週身心平衡瑜伽之旅</h3>
-          <div class="card-lines"><p>大安區瑜伽空間</p><p>7/21 - 9/8</p><p>每週二 2:00-3:30</p></div>
-          
-          <a class="card-action" href="https://www.timelyclass.com/courses/chakra-yoga-aroma" target="_blank" rel="noreferrer">報名｜可私訊IG拿取折扣碼</a>
-        </article>
+      <nav class="links">
+        <a class="link-button solid" href="#venues">教室位置</a>
+        <a class="link-button solid" href="#events">本月特別活動</a>
+        <a
+          class="link-button solid"
+          href="https://yoga.flowwithkristy.com/"
+          target="_blank"
+          rel="noreferrer"
+          >洞洞瑜伽社官方網站</a
+        >
+      </nav>
+
+      <section class="section" id="terms">
+        <div class="section-head">
+          <h2>期班課程</h2>
+          <span>Programs</span>
         </div>
-    </section>
-    
+        <div class="cards">
+          <article class="card">
+            <h3>脈輪覺醒｜8 週身心平衡瑜伽之旅</h3>
+            <div class="card-lines">
+              <p>大安區瑜伽空間</p>
+              <p>7/21 - 9/8</p>
+              <p>每週二 2:00-3:30</p>
+            </div>
 
-        <section class="section" id="schedule">
-          <div class="section-head">
-            <h2>2026/07 課表</h2>
-            <span>Monthly Schedule</span>
-          </div>
-          <img class="schedule-image" src="assets/schedule.png" alt="2026/07 課表">
-        </section>
-        
-
-    <section class="section" id="events">
-      <div class="section-head">
-        <h2>特別活動</h2>
-        <span>Events</span>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <h3>瑜伽自習室</h3>
-          <div class="card-lines"><p>7/12 週日 9:00-11:00</p><p>7/16 週四 19:00-21:00</p><p class="card-location">六張犁社宅 A201</p></div>
-          
-          <a class="card-action" href="https://docs.google.com/forms/d/e/1FAIpQLScpa9FkYFJT4qiG7uWZpx9U-VY_-EcwFk98IaK2XlZycTNo4Q/viewform?usp=dialog" target="_blank" rel="noreferrer">我要報名</a>
-        </article>
-        
-
-        <article class="card">
-          <h3>LASSO瑜伽生活節</h3>
-          <div class="card-lines"><p>7/18 週六 10:00-16:00</p><p class="card-location">新北投公園</p></div>
-          
-          <a class="card-action" href="https://www.facebook.com/LassoYogaFestival" target="_blank" rel="noreferrer">活動詳情</a>
-        </article>
-        
-
-        <article class="card">
-          <h3>基礎哈達</h3>
-          <div class="card-lines"><p>7/24 週五 19:00-21:00</p><p class="card-location">六張犁社宅 A201</p></div>
-          
-          <a class="card-action" href="https://docs.google.com/forms/d/e/1FAIpQLSdLaxLyh5WIrvKDSq-SOjcY9RcCe-PriyCRFkvXJY9-VVU8xw/viewform?usp=dialog" target="_blank" rel="noreferrer">我要報名</a>
-        </article>
+            <a
+              class="card-action"
+              href="https://www.timelyclass.com/courses/chakra-yoga-aroma"
+              target="_blank"
+              rel="noreferrer"
+              >報名｜折扣碼 KRISTY500
+            </a>
+          </article>
         </div>
-    </section>
-    
+      </section>
 
-    <section class="section" id="venues">
-      <div class="section-head">
-        <h2>教室位置</h2>
-        <span>Venues</span>
-      </div>
-      <div class="venue-list">
-    <article class="venue-row">
-      <div>
-        <div class="venue-name">老屋瑜伽</div>
-        
-      </div>
-      <div class="venue-actions"><a href="https://maps.app.goo.gl/GyNEAzTZHQfZn3A98" target="_blank" rel="noreferrer">查看地點</a><span>·</span><a href="https://www.instagram.com/yogahaventpe/" target="_blank" rel="noreferrer">IG</a></div>
-    </article>
-    
+      <section class="section" id="schedule">
+        <div class="section-head">
+          <h2>2026/07 課表</h2>
+          <span>Monthly Schedule</span>
+        </div>
+        <img
+          class="schedule-image"
+          src="assets/schedule.png"
+          alt="2026/07 課表"
+        />
+      </section>
 
-    <article class="venue-row">
-      <div>
-        <div class="venue-name">慢慢瑜伽</div>
-        
-      </div>
-      <div class="venue-actions"><a href="https://maps.app.goo.gl/1tcPVnxCZkZhsMEF8" target="_blank" rel="noreferrer">查看地點</a><span>·</span><a href="https://www.instagram.com/mm_yogaspace/" target="_blank" rel="noreferrer">IG</a></div>
-    </article>
-    
+      <section class="section" id="events">
+        <div class="section-head">
+          <h2>特別活動</h2>
+          <span>Events</span>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>瑜伽自習室</h3>
+            <div class="card-lines">
+              <p>7/12 週日 9:00-11:00</p>
+              <p>7/16 週四 19:00-21:00</p>
+              <p class="card-location">六張犁社宅 A201</p>
+            </div>
 
-    <article class="venue-row">
-      <div>
-        <div class="venue-name">興隆D 區社宅</div>
-        
-      </div>
-      <div class="venue-actions"><a href="https://maps.app.goo.gl/m3LAxm9pEoAJTzzn6" target="_blank" rel="noreferrer">查看地點</a></div>
-    </article>
-    
+            <a
+              class="card-action"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScpa9FkYFJT4qiG7uWZpx9U-VY_-EcwFk98IaK2XlZycTNo4Q/viewform?usp=dialog"
+              target="_blank"
+              rel="noreferrer"
+              >我要報名</a
+            >
+          </article>
 
-    <article class="venue-row">
-      <div>
-        <div class="venue-name">六張犁社宅</div>
-        
-      </div>
-      <div class="venue-actions"><a href="https://maps.app.goo.gl/jz4BD3roJt8JZ2B17" target="_blank" rel="noreferrer">查看地點</a></div>
-    </article>
-    </div>
-    </section>
-    
-    <p class="powered">Powered by IG 課表圖文生成系統</p>
-  </main>
-</body>
+          <article class="card">
+            <h3>LASSO瑜伽生活節</h3>
+            <div class="card-lines">
+              <p>7/18 週六 10:00-16:00</p>
+              <p class="card-location">新北投公園</p>
+            </div>
+
+            <a
+              class="card-action"
+              href="https://www.facebook.com/LassoYogaFestival"
+              target="_blank"
+              rel="noreferrer"
+              >活動詳情</a
+            >
+          </article>
+
+          <article class="card">
+            <h3>基礎哈達</h3>
+            <div class="card-lines">
+              <p>7/24 週五 19:00-21:00</p>
+              <p class="card-location">六張犁社宅 A201</p>
+            </div>
+
+            <a
+              class="card-action"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdLaxLyh5WIrvKDSq-SOjcY9RcCe-PriyCRFkvXJY9-VVU8xw/viewform?usp=dialog"
+              target="_blank"
+              rel="noreferrer"
+              >我要報名</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="venues">
+        <div class="section-head">
+          <h2>教室位置</h2>
+          <span>Venues</span>
+        </div>
+        <div class="venue-list">
+          <article class="venue-row">
+            <div>
+              <div class="venue-name">老屋瑜伽</div>
+            </div>
+            <div class="venue-actions">
+              <a
+                href="https://maps.app.goo.gl/GyNEAzTZHQfZn3A98"
+                target="_blank"
+                rel="noreferrer"
+                >查看地點</a
+              ><span>·</span
+              ><a
+                href="https://www.instagram.com/yogahaventpe/"
+                target="_blank"
+                rel="noreferrer"
+                >IG</a
+              >
+            </div>
+          </article>
+
+          <article class="venue-row">
+            <div>
+              <div class="venue-name">慢慢瑜伽</div>
+            </div>
+            <div class="venue-actions">
+              <a
+                href="https://maps.app.goo.gl/1tcPVnxCZkZhsMEF8"
+                target="_blank"
+                rel="noreferrer"
+                >查看地點</a
+              ><span>·</span
+              ><a
+                href="https://www.instagram.com/mm_yogaspace/"
+                target="_blank"
+                rel="noreferrer"
+                >IG</a
+              >
+            </div>
+          </article>
+
+          <article class="venue-row">
+            <div>
+              <div class="venue-name">興隆D 區社宅</div>
+            </div>
+            <div class="venue-actions">
+              <a
+                href="https://maps.app.goo.gl/m3LAxm9pEoAJTzzn6"
+                target="_blank"
+                rel="noreferrer"
+                >查看地點</a
+              >
+            </div>
+          </article>
+
+          <article class="venue-row">
+            <div>
+              <div class="venue-name">六張犁社宅</div>
+            </div>
+            <div class="venue-actions">
+              <a
+                href="https://maps.app.goo.gl/jz4BD3roJt8JZ2B17"
+                target="_blank"
+                rel="noreferrer"
+                >查看地點</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <p class="powered">Powered by IG 課表圖文生成系統</p>
+    </main>
+  </body>
 </html>
